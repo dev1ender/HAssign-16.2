@@ -1,0 +1,8 @@
+--add the jar to the hive
+ADD JAR /home/acadgild/Assignments/Hive/16/16.2/ConcatUDF.jar; 
+
+--creatte the temporay 
+CREATE TEMPORARY FUNCTION StringConcat AS 'concatUDF';
+
+
+select StringConcat ('Love',array('I','You'));
